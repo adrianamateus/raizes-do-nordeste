@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raízes do Nordeste</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fluxo.css" />
+    <style>
+      #privacidade {
+        max-width: 850px;
+      }
+      #privacidade h2 {
+        color: #09491b;
+        font-size: 1.2rem;
+        margin: 1.5rem 0 0.4rem;
+      }
+      #privacidade p {
+        line-height: 1.55;
+        margin: 0.7rem 0;
+      }
+      #privacidade .politica-data {
+        font-size: 0.9rem;
+        color: #655b50;
+      }
+      #privacidade .politica-aviso {
+        margin-top: 1.5rem;
+        padding-top: 0.8rem;
+        border-top: 1px solid #d8cbbb;
+        color: #655b50;
+        font-size: 0.78rem;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagina-inicial">
+      <header class="cabecalho">
+        <a
+          href="#inicio"
+          class="link-logo"
+          aria-label="Raízes do Nordeste — ir para a página inicial"
+        >
+          <img
+            src="assets/logoraizes.webp"
+            alt="Raízes do Nordeste"
+            class="logo"
+          />
+        </a>
+        <a
+          href="#carrinho"
+          id="link-carrinho"
+          class="link-carrinho-cabecalho"
+          aria-label="Ver carrinho"
+        >
+          <span class="carrinho-icone" aria-hidden="true">🛒</span>
+          <span class="carrinho-texto">Carrinho</span>
+          <span class="carrinho-contador" id="quantidade-carrinho">0</span>
+        </a>
+        <button
+          type="button"
+          class="botao-menu"
+          id="botao-menu"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu-navegacao"
+        >
+          ☰
+        </button>
+        <nav
+          class="menu-navegacao"
+          id="menu-navegacao"
+          aria-label="Navegação principal"
+        >
+          <div class="menu-cardapio">
+            <button
+              type="button"
+              class="botao-cardapio"
+              id="botao-cardapio"
+              aria-expanded="false"
+              aria-controls="lista-unidades"
+            >
+              Cardápio
+            </button>
+            <ul class="lista-unidades" id="lista-unidades" hidden>
+              <li>
+                <button type="button" data-unidade="recife">Recife – PE</button>
+              </li>
+              <li>
+                <button type="button" data-unidade="caruaru">
+                  Caruaru – PE
+                </button>
+              </li>
+              <li>
+                <button type="button" data-unidade="salvador">
+                  Salvador – BA
+                </button>
+              </li>
+              <li>
+                <button type="button" data-unidade="feira-de-santana">
+                  Feira de Santana – BA
+                </button>
+              </li>
+              <li>
+                <button type="button" data-unidade="fortaleza">
+                  Fortaleza – CE
+                </button>
+              </li>
+              <li>
+                <button type="button" data-unidade="juazeiro-do-norte">
+                  Juazeiro do Norte – CE
+                </button>
+              </li>
+            </ul>
+          </div>
+          <a href="#promocoes">Clube Raízes</a>
+          <a href="#lojas">Nossas Lojas</a>
+          <a href="#institucional">Institucional</a>
+          <a href="#contato">Fale Conosco</a>
+          <a href="#privacidade">Privacidade</a>
+        </nav>
+      </header>
+<main class="conteudo-principal" id="inicio">
+        <section class="apresentacao" aria-labelledby="titulo-apresentacao">
+          <h1 id="titulo-apresentacao">
+            Sabor que vem das nossas <span>raízes</span>
+          </h1>
+
+          <div class="detalhe-ondulado" aria-hidden="true"></div>
+        </section>
+
+        <section class="chamada-cardapio" aria-labelledby="titulo-chamada">
+          <h2 id="titulo-chamada">
+            Bateu aquela fome arretada!<br />
+            <span>Oxente, chegou na hora certa!</span>
+          </h2>
+        </section>
+      </main>
+<section
+        class="secao-cardapio"
+        id="cardapio-recife"
+        aria-labelledby="titulo-cardapio-recife"
+        hidden
+      >
+        <div class="conteudo-cardapio">
+          <div class="cabecalho-cardapio">
+            <h1 id="titulo-cardapio-recife">Cardápio de Recife</h1>
+            <p>Matriz • Cozinha completa</p>
+          </div>
+          <div
+            class="categorias-cardapio"
+            role="group"
+            aria-label="Categorias do cardápio"
+          >
+            <button
+              type="button"
+              class="categoria-ativa"
+              data-categoria="salgados"
+              aria-pressed="true"
+            >
+              Salgados
+            </button>
+            <button type="button" data-categoria="doces" aria-pressed="false">
+              Doces
+            </button>
+            <button type="button" data-categoria="bebidas" aria-pressed="false">
+              Bebidas
+            </button>
+            <button
+              type="button"
+              data-categoria="promocoes"
+              aria-pressed="false"
+            >
+              Promoções
+            </button>
+            <button type="button" data-categoria="junino" aria-pressed="false">
+              🌽 Especial de São João
+            </button>
+          </div>
+          <div
+            id="produtos-recife"
+            class="grade-produtos"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+<section
+        class="secao-cardapio"
+        id="cardapio-caruaru"
+        aria-labelledby="titulo-cardapio-caruaru"
+        hidden
+      >
+        <div class="conteudo-cardapio">
+          <div class="cabecalho-cardapio">
+            <h1 id="titulo-cardapio-caruaru">Cardápio de Caruaru</h1>
+            <p>Filial • Cozinha reduzida</p>
+          </div>
+          <div
+            class="categorias-cardapio"
+            role="group"
+            aria-label="Categorias do cardápio"
+          >
+            <button
+              type="button"
+              class="categoria-ativa"
+              data-categoria="salgados"
+              aria-pressed="true"
+            >
+              Salgados
+            </button>
+            <button type="button" data-categoria="doces" aria-pressed="false">
+              Doces
+            </button>
+            <button type="button" data-categoria="bebidas" aria-pressed="false">
+              Bebidas
+            </button>
+            <button
+              type="button"
+              data-categoria="promocoes"
+              aria-pressed="false"
+            >
+              Promoções
+            </button>
+            <button type="button" data-categoria="junino" aria-pressed="false">
+              🌽 Especial de São João
+            </button>
+          </div>
+          <div
+            id="produtos-caruaru"
+            class="grade-produtos"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+<section
+        class="secao-cardapio"
+        id="cardapio-salvador"
+        aria-labelledby="titulo-cardapio-salvador"
+        hidden
+      >
+        <div class="conteudo-cardapio">
+          <div class="cabecalho-cardapio">
+            <h1 id="titulo-cardapio-salvador">Cardápio de Salvador</h1>
+            <p>Filial • Cozinha completa</p>
+          </div>
+          <div
+            class="categorias-cardapio"
+            role="group"
+            aria-label="Categorias do cardápio"
+          >
+            <button
+              type="button"
+              class="categoria-ativa"
+              data-categoria="salgados"
+              aria-pressed="true"
+            >
+              Salgados
+            </button>
+            <button type="button" data-categoria="doces" aria-pressed="false">
+              Doces
+            </button>
+            <button type="button" data-categoria="bebidas" aria-pressed="false">
+              Bebidas
+            </button>
+            <button
+              type="button"
+              data-categoria="promocoes"
+              aria-pressed="false"
+            >
+              Promoções
+            </button>
+            <button type="button" data-categoria="junino" aria-pressed="false">
+              🌽 Especial de São João
+            </button>
+          </div>
+          <div
+            id="produtos-salvador"
+            class="grade-produtos"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+<section
+        class="secao-cardapio"
+        id="cardapio-feira-de-santana"
+        aria-labelledby="titulo-cardapio-feira-de-santana"
+        hidden
+      >
+        <div class="conteudo-cardapio">
+          <div class="cabecalho-cardapio">
+            <h1 id="titulo-cardapio-feira-de-santana">
+              Cardápio de Feira de Santana
+            </h1>
+            <p>Filial • Cozinha reduzida</p>
+          </div>
+          <div
+            class="categorias-cardapio"
+            role="group"
+            aria-label="Categorias do cardápio"
+          >
+            <button
+              type="button"
+              class="categoria-ativa"
+              data-categoria="salgados"
+              aria-pressed="true"
+            >
+              Salgados
+            </button>
+            <button type="button" data-categoria="doces" aria-pressed="false">
+              Doces
+            </button>
+            <button type="button" data-categoria="bebidas" aria-pressed="false">
+              Bebidas
+            </button>
+            <button
+              type="button"
+              data-categoria="promocoes"
+              aria-pressed="false"
+            >
+              Promoções
+            </button>
+            <button type="button" data-categoria="junino" aria-pressed="false">
+              🌽 Especial de São João
+            </button>
+          </div>
+          <div
+            id="produtos-feira-de-santana"
+            class="grade-produtos"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+<section
+        class="secao-cardapio"
+        id="cardapio-fortaleza"
+        aria-labelledby="titulo-cardapio-fortaleza"
+        hidden
+      >
+        <div class="conteudo-cardapio">
+          <div class="cabecalho-cardapio">
+            <h1 id="titulo-cardapio-fortaleza">Cardápio de Fortaleza</h1>
+            <p>Filial • Cozinha completa</p>
+          </div>
+          <div
+            class="categorias-cardapio"
+            role="group"
+            aria-label="Categorias do cardápio"
+          >
+            <button
+              type="button"
+              class="categoria-ativa"
+              data-categoria="salgados"
+              aria-pressed="true"
+            >
+              Salgados
+            </button>
+            <button type="button" data-categoria="doces" aria-pressed="false">
+              Doces
+            </button>
+            <button type="button" data-categoria="bebidas" aria-pressed="false">
+              Bebidas
+            </button>
+            <button
+              type="button"
+              data-categoria="promocoes"
+              aria-pressed="false"
+            >
+              Promoções
+            </button>
+            <button type="button" data-categoria="junino" aria-pressed="false">
+              🌽 Especial de São João
+            </button>
+          </div>
+          <div
+            id="produtos-fortaleza"
+            class="grade-produtos"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+<section
+        class="secao-cardapio"
+        id="cardapio-juazeiro-do-norte"
+        aria-labelledby="titulo-cardapio-juazeiro-do-norte"
+        hidden
+      >
+        <div class="conteudo-cardapio">
+          <div class="cabecalho-cardapio">
+            <h1 id="titulo-cardapio-juazeiro-do-norte">
+              Cardápio de Juazeiro do Norte
+            </h1>
+            <p>Filial • Cozinha reduzida</p>
+          </div>
+          <div
+            class="categorias-cardapio"
+            role="group"
+            aria-label="Categorias do cardápio"
+          >
+            <button
+              type="button"
+              class="categoria-ativa"
+              data-categoria="salgados"
+              aria-pressed="true"
+            >
+              Salgados
+            </button>
+            <button type="button" data-categoria="doces" aria-pressed="false">
+              Doces
+            </button>
+            <button type="button" data-categoria="bebidas" aria-pressed="false">
+              Bebidas
+            </button>
+            <button
+              type="button"
+              data-categoria="promocoes"
+              aria-pressed="false"
+            >
+              Promoções
+            </button>
+            <button type="button" data-categoria="junino" aria-pressed="false">
+              🌽 Especial de São João
+            </button>
+          </div>
+          <div
+            id="produtos-juazeiro-do-norte"
+            class="grade-produtos"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+<main class="conteudo-contato" id="contato" hidden>
+        <section class="formulario-contato" aria-labelledby="titulo-contato">
+          <h1 id="titulo-contato">Fale Conosco</h1>
+          <p>
+            Tem alguma dúvida, reclamação ou sugestão? <br />Escreva para a
+            gente!
+          </p>
+
+          <form id="form-contato">
+            <label for="contato-nome">Nome</label>
+            <input
+              type="text"
+              id="contato-nome"
+              name="nome"
+              autocomplete="name"
+              required
+            />
+
+            <label for="contato-email">E-mail</label>
+            <input
+              type="email"
+              id="contato-email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="contato-mensagem">Mensagem</label>
+            <textarea
+              id="contato-mensagem"
+              name="mensagem"
+              rows="5"
+              required
+            ></textarea>
+
+            <p class="contato-privacidade">Nome, e-mail e mensagem são usados apenas para demonstrar o atendimento neste protótipo; não são enviados nem armazenados. Consulte a <a href="#privacidade">Política de Privacidade</a>.</p>
+            <button type="submit" class="contato-enviar">Enviar</button>
+            <p
+              id="contato-retorno"
+              class="contato-retorno"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </section>
+      </main>
+<section id="institucional" class="secao-institucional" hidden>
+        <div class="conteudo-institucional">
+          <h1>Nossa História</h1>
+
+          <div class="cartoes-institucional">
+            <article class="cartao-historia">
+              <h2>🌵 Onde tudo começou</h2>
+              <p>
+                A Raízes do Nordeste nasceu há pouco mais de seis anos, em um
+                bairro tradicional de Recife, Pernambuco. Tudo começou com um
+                pequeno negócio familiar, comandado por Dona Francisca e seus
+                dois filhos, que compartilhavam o sonho de levar os sabores e as
+                tradições da culinária nordestina para cada vez mais pessoas.
+              </p>
+            </article>
+
+            <article class="cartao-historia">
+              <h2>☕ O sabor das nossas raízes</h2>
+              <p>
+                Com o cheirinho de cuscuz quentinho, café passado na hora e
+                manteiga de garrafa, a primeira lanchonete conquistou seus
+                clientes com receitas tradicionais, atendimento acolhedor e
+                aquele gostinho especial de comida feita com carinho.
+              </p>
+            </article>
+
+            <article class="cartao-historia">
+              <h2>📍 Nossa expansão</h2>
+              <p>
+                O sucesso da primeira unidade abriu caminho para novos sonhos. A
+                Raízes do Nordeste chegou a Caruaru, no interior de Pernambuco,
+                e continuou crescendo, levando seus sabores para Salvador e
+                Feira de Santana, na Bahia, e depois para Fortaleza e Juazeiro
+                do Norte, no Ceará.
+              </p>
+              <p>
+                Hoje, nossa rede conta com seis unidades distribuídas pelos três
+                estados, mantendo viva a essência daquele pequeno negócio
+                familiar que começou em Recife.
+              </p>
+            </article>
+
+            <article class="cartao-historia">
+              <h2>❤️ Nossa essência</h2>
+              <p>
+                Em nosso cardápio, tapiocas, cuscuz recheados, bolo de
+                macaxeira, sucos regionais e outras delícias celebram a riqueza
+                da gastronomia nordestina, respeitando as particularidades e os
+                sabores de cada região.
+              </p>
+              <p>
+                Mais do que servir refeições, queremos proporcionar momentos de
+                aconchego, valorizar nossa cultura e fazer com que cada cliente
+                se sinta em casa.
+              </p>
+            </article>
+          </div>
+
+          <p class="frase-institucional">
+            Raízes do Nordeste, nossas raízes, nossa história, nosso sabor! 🌵
+          </p>
+        </div>
+      </section>
+<section id="lojas" class="secao-lojas" hidden>
+        <div class="conteudo-lojas">
+          <h1>Nossas Lojas</h1>
+          <p class="introducao-lojas">
+            Encontre um pedacinho do Nordeste pertinho de você!
+          </p>
+
+          <div class="cartoes-lojas">
+            <article class="cartao-loja">
+              <h2>Recife – PE</h2>
+              <p class="tipo-loja">Matriz</p>
+              <p><strong>Endereço:</strong> Rua das Raízes, 120 – Boa Vista</p>
+              <p><strong>Segunda a sábado:</strong> das 8h às 20h</p>
+              <p><strong>Domingo:</strong> das 8h às 16h</p>
+              <p><strong>Feriados:</strong> fechado</p>
+            </article>
+
+            <article class="cartao-loja">
+              <h2>Caruaru – PE</h2>
+              <p class="tipo-loja">Filial</p>
+              <p><strong>Endereço:</strong> Rua do Cuscuz, 85 – Centro</p>
+              <p><strong>Segunda a sábado:</strong> das 8h às 20h</p>
+              <p><strong>Domingo:</strong> fechado</p>
+              <p><strong>Feriados:</strong> fechado</p>
+            </article>
+
+            <article class="cartao-loja">
+              <h2>Salvador – BA</h2>
+              <p class="tipo-loja">Filial</p>
+              <p><strong>Endereço:</strong> Rua dos Sabores, 210 – Pituba</p>
+              <p><strong>Segunda a sábado:</strong> das 8h às 20h</p>
+              <p><strong>Domingo:</strong> das 8h às 16h</p>
+              <p><strong>Feriados:</strong> fechado</p>
+            </article>
+
+            <article class="cartao-loja">
+              <h2>Feira de Santana – BA</h2>
+              <p class="tipo-loja">Filial</p>
+              <p><strong>Endereço:</strong> Rua do Aconchego, 65 – Centro</p>
+              <p><strong>Segunda a sábado:</strong> das 8h às 20h</p>
+              <p><strong>Domingo:</strong> fechado</p>
+              <p><strong>Feriados:</strong> fechado</p>
+            </article>
+
+            <article class="cartao-loja">
+              <h2>Fortaleza – CE</h2>
+              <p class="tipo-loja">Filial</p>
+              <p><strong>Endereço:</strong> Rua da Tapioca, 180 – Aldeota</p>
+              <p><strong>Segunda a sábado:</strong> das 8h às 20h</p>
+              <p><strong>Domingo:</strong> fechado</p>
+              <p><strong>Feriados:</strong> fechado</p>
+            </article>
+
+            <article class="cartao-loja">
+              <h2>Juazeiro do Norte – CE</h2>
+              <p class="tipo-loja">Filial</p>
+              <p><strong>Endereço:</strong> Rua do Mandacaru, 95 – Centro</p>
+              <p><strong>Segunda a sábado:</strong> das 8h às 20h</p>
+              <p><strong>Domingo:</strong> fechado</p>
+              <p><strong>Feriados:</strong> fechado</p>
+            </article>
+          </div>
+
+          <p class="aviso-lojas">
+            Unidades e endereços fictícios, desenvolvidos para fins acadêmicos.
+          </p>
+        </div>
+      </section>
+<section id="promocoes" class="secao-promocoes" hidden>
+        <div class="conteudo-promocoes">
+          <h1>Clube Raízes 🌵</h1>
+          <p class="introducao-promocoes">
+            Seu carinho pelas nossas raízes vale pontos!
+          </p>
+<div class="cartoes-promocoes">
+            <article class="cartao-promocao">
+              <h2>⭐ Acumule pontos</h2>
+              <p>
+                A cada R$ 1,00 em compras, você ganha 1 ponto. Quanto mais você
+                aproveita nossos sabores, mais pontos acumula!
+              </p>
+            </article>
+
+            <article class="cartao-promocao">
+              <h2>🎁 Troque por benefícios</h2>
+              <p>
+                Junte 100 pontos e ganhe R$ 10,00 de desconto em seu próximo
+                pedido.
+              </p>
+            </article>
+
+            <article class="cartao-promocao">
+              <h2>📍 Vale nas seis unidades</h2>
+              <p>
+                Seus pontos podem ser acumulados e utilizados em qualquer uma
+                das seis unidades da Raízes do Nordeste.
+              </p>
+            </article>
+<div class="participar-clube">
+              <h2>Como participar do Clube Raízes?</h2>
+              <p class="descricao-cadastro">
+                O cadastro é gratuito! Para participar, basta se cadastrar no
+                Clube Raízes e se identificar ao comprar para acumular pontos e
+                aproveitar os benefícios disponíveis.
+              </p>
+
+              <p class="informacao-cadastro" id="clube-acesso-texto">
+                Ainda não participa? Entre ou faça seu cadastro gratuito.
+              </p>
+              <p class="clube-acesso-acoes">
+                <a
+                  href="#conta"
+                  id="clube-acesso-conta"
+                  class="fluxo-botao carrinho-link"
+                  >Entrar / Cadastrar</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <p id="aviso-unidade" class="aviso-unidade" role="alert" hidden></p>
+<section id="carrinho" class="fluxo-pagina" hidden>
+        <h1>Meu carrinho 🛒</h1>
+        <p id="carrinho-unidade"></p>
+        <div id="carrinho-itens"></div>
+        <div class="carrinho-resumo">
+          <div class="carrinho-beneficios">
+            <strong>Clube Raízes</strong>
+            <p id="clube-instrucao">
+              Quer um desconto arretado nos seus pedidos? Venha conhecer o
+              <a href="#promocoes" class="carrinho-identificar"
+                >Clube Raízes!</a
+              >
+              <a href="#conta" id="carrinho-entrar" class="carrinho-identificar"
+                >Entrar / Cadastrar</a
+              >
+            </p>
+            <p id="carrinho-saudacao" class="carrinho-saudacao" hidden></p>
+            <div id="clube-saldo-area" hidden>
+              <p id="clube-saldo" class="clube-saldo"></p>
+              <label id="clube-resgate-linha" class="clube-resgate"
+                ><input id="clube-resgatar" type="checkbox" /> Usar 100 pontos
+                para receber R$ 10,00 de desconto</label
+              >
+              <p id="clube-resgate-aviso" class="carrinho-resumo-nota"></p>
+            </div>
+          </div>
+          <p id="carrinho-subtotal" class="clube-valor-linha"></p>
+          <p id="carrinho-desconto" class="clube-valor-linha" hidden></p>
+          <p id="carrinho-total" class="carrinho-total"></p>
+        </div>
+        <div class="carrinho-acoes">
+          <a
+            id="continuar-comprando"
+            class="fluxo-botao carrinho-link"
+            href="#cardapio-recife"
+            >Continuar comprando</a
+          >
+          <button type="button" id="finalizar-pedido" class="fluxo-botao">
+            Finalizar pedido
+          </button>
+        </div>
+        <p id="carrinho-aviso" role="status"></p>
+      </section>
+<section id="identificar-pedido" class="fluxo-pagina" hidden>
+        <h1>Identificação do pedido</h1>
+        <p>
+          Informe seu primeiro nome para facilitar a retirada. Não é necessário
+          fazer login.
+        </p>
+        <form id="form-identificar-pedido" class="pedido-formulario">
+          <label for="pedido-nome">Primeiro nome</label>
+          <input
+            id="pedido-nome"
+            name="nome"
+            maxlength="40"
+            autocomplete="given-name"
+            required
+            placeholder="Ex.: João"
+          />
+          <p id="pedido-resumo" class="pedido-resumo"></p>
+
+          <div class="carrinho-acoes">
+            <a class="fluxo-botao carrinho-link" href="#carrinho"
+              >Voltar ao carrinho</a
+            >
+            <button class="fluxo-botao" type="submit">Ir para pagamento</button>
+          </div>
+          <p id="pedido-erro" role="alert"></p>
+        </form>
+      </section>
+<section id="pagamento" class="fluxo-pagina" hidden>
+        <h1>Pagamento do pedido</h1>
+        <p>
+          Confira os dados e escolha a forma de pagamento. Nenhum valor será
+          cobrado.
+        </p>
+        <form id="form-pagamento" class="pedido-formulario">
+          <label for="pagamento-forma">Forma de pagamento</label>
+          <select id="pagamento-forma" required>
+            <option value="">Selecione</option>
+            <option value="Pix">Pix (simulação)</option>
+            <option value="Cartão de débito">
+              Cartão de débito (simulação)
+            </option>
+            <option value="Cartão de crédito">
+              Cartão de crédito (simulação)
+            </option>
+          </select>
+          <p class="carrinho-resumo-nota">
+            Simulação de pagamento externo <br />
+          </p>
+          <div class="aviso-preparo" role="note">
+            <strong>⏳ Tempo estimado de preparo: 25–35 minutos</strong>
+            <p>Estamos em horário de pico! O preparo do seu pedido pode levar um pouquinho mais de tempo. Agradecemos a compreensão. 🌵</p>
+            <small>Estimativa ilustrativa, sem cálculo de fila em tempo real.</small>
+          </div>
+          <div class="pagamento-acoes">
+            <button type="submit" class="fluxo-botao" id="pagamento-enviar">
+              Simular pagamento aprovado
+            </button>
+            <button type="button" class="fluxo-botao" id="pagamento-recusar">
+              Simular pagamento recusado
+            </button>
+          </div>
+          <div class="pagamento-voltar">
+            <a class="fluxo-botao carrinho-link" href="#identificar-pedido"
+              >Voltar</a
+            >
+          </div>
+          <p id="pagamento-retorno" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="pedido-confirmado" class="fluxo-pagina" hidden>
+        <h1>Pedido registrado! 🌵</h1>
+        <div class="pedido-comprovante">
+          <p id="pedido-confirmado-unidade"></p>
+          <p>Senha de retirada</p>
+          <strong id="pedido-confirmado-numero" class="pedido-numero"></strong>
+          <p id="pedido-confirmado-nome"></p>
+          <p id="pedido-confirmado-total"></p>
+          <p>
+            <strong>Pagamento:</strong>
+            <span id="pedido-confirmado-pagamento"></span>
+          </p>
+          <p>
+            <strong>Situação:</strong>
+            <span id="pedido-confirmado-situacao"></span>
+          </p>
+        </div>
+
+        <div class="carrinho-acoes">
+          <a class="fluxo-botao carrinho-link" href="#acompanhar-pedido"
+            >Acompanhar pedido</a
+          >
+          <a class="fluxo-botao carrinho-link" href="#inicio"
+            >Voltar ao início</a
+          >
+        </div>
+      </section>
+
+      <section id="acompanhar-pedido" class="fluxo-pagina" hidden>
+        <h1>Acompanhar pedido</h1>
+        <div class="pedido-comprovante" id="acompanhamento-dados">
+          <p id="acompanhamento-identificacao"></p>
+          <p
+            id="acompanhamento-situacao"
+            class="pedido-resumo"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <ol
+            id="acompanhamento-etapas"
+            class="acompanhamento-etapas"
+            aria-label="Etapas do pedido"
+          ></ol>
+        </div>
+
+        <p><a href="#inicio">Voltar ao início</a></p>
+      </section>
+<section id="conta" class="fluxo-pagina" hidden>
+        <div id="conta-logada" hidden>
+          <h2>Bem-vindo(a), <span id="conta-nome"></span>!</h2>
+          <div class="conta-dados" aria-label="Dados cadastrais">
+            <p>
+              <strong>Nome completo</strong
+              ><span id="conta-nome-completo"></span>
+            </p>
+            <p><strong>CPF</strong><span id="conta-cpf"></span></p>
+            <p>
+              <strong>Data de nascimento</strong
+              ><span id="conta-nascimento"></span>
+            </p>
+            <p><strong>E-mail</strong><span id="conta-email"></span></p>
+            <p><strong>Telefone</strong><span id="conta-telefone"></span></p>
+          </div>
+          <div class="conta-pontos">
+            <h3>Clube Raízes 🌵</h3>
+            <p>Saldo disponível: <strong id="conta-pontos"></strong></p>
+          </div>
+          <div class="conta-acoes">
+            <a
+              href="#cardapio-recife"
+              id="conta-ver-cardapio"
+              class="fluxo-botao carrinho-link"
+              >Ver cardápio</a
+            >
+            <button type="button" id="sair-conta" class="fluxo-botao">
+              Sair da conta
+            </button>
+            <button type="button" id="excluir-conta" class="fluxo-botao fluxo-botao-excluir">
+              Excluir conta
+            </button>
+          </div>
+        </div>
+        <div id="conta-formularios" class="fluxo-duas-colunas">
+          <form id="form-login" class="fluxo-formulario">
+            <h2>Entrar</h2>
+            <label
+              >E-mail
+              <input type="email" name="email" required autocomplete="off"
+            /></label>
+            <label
+              >Senha
+              <input
+                type="password"
+                name="senha"
+                required
+                minlength="8"
+                autocomplete="off"
+            /></label>
+            <button class="fluxo-botao" type="submit">Entrar</button>
+            <p id="login-mensagem" class="fluxo-mensagem" role="status"></p>
+          </form>
+          <form id="form-cadastro" class="fluxo-formulario">
+            <h2>Cadastrar no Clube Raízes</h2>
+            <label
+              >Nome completo
+              <input name="nome" required minlength="2" autocomplete="off"
+            /></label>
+            <label
+              >CPF
+              <input
+                name="cpf"
+                inputmode="numeric"
+                placeholder="000.000.000-00"
+                maxlength="14"
+                required
+                autocomplete="off"
+            /></label>
+            <label
+              >Data de nascimento <input name="nascimento" type="date" required
+            /></label>
+            <label
+              >E-mail
+              <input name="email" type="email" required autocomplete="off"
+            /></label>
+            <label
+              >Telefone com DDD
+              <input
+                name="telefone"
+                type="tel"
+                placeholder="(81) 99999-9999"
+                maxlength="15"
+                required
+                autocomplete="off"
+            /></label>
+            <label
+              >Senha (mínimo de 8 caracteres)
+              <input
+                name="senha"
+                type="password"
+                minlength="8"
+                required
+                autocomplete="new-password"
+            /></label>
+            <label
+              >Confirmar senha
+              <input
+                name="confirmar"
+                type="password"
+                minlength="8"
+                required
+                autocomplete="new-password"
+            /></label>
+            <div class="fluxo-privacidade">
+              <h3>Privacidade dos seus dados</h3>
+              <p>
+                Usaremos nome, CPF, data de nascimento, e-mail e telefone para
+                identificar sua participação no Clube Raízes, administrar
+                benefícios e permitir contato relacionado aos pedidos. Leia
+                nossa <a href="#privacidade">Política de Privacidade</a>.
+              </p>
+              <label class="fluxo-aceite"
+                ><input type="checkbox" name="consentimento" required /> Li as
+                informações e concordo com o tratamento dos meus dados para
+                participar do Clube Raízes.</label
+              >
+            </div>
+            <button class="fluxo-botao" type="submit">Criar minha conta</button>
+            <p id="cadastro-mensagem" class="fluxo-mensagem" role="status"></p>
+          </form>
+        </div>
+      </section>
+      <section id="privacidade" class="fluxo-pagina" hidden>
+        <h1>Política de Privacidade — Raízes do Nordeste</h1>
+        <p class="politica-data">Última atualização: novembro de 2026</p>
+        <p>
+          O Raízes do Nordeste valoriza a privacidade de seus clientes e se
+          compromete com o tratamento responsável dos dados pessoais, conforme a
+          Lei Geral de Proteção de Dados Pessoais (LGPD — Lei nº 13.709/2018).
+        </p>
+        <p>
+          Esta política apresenta as práticas previstas para a operação completa
+          do site e do programa de fidelidade Clube Raízes.
+        </p>
+
+        <h2>1. Coleta de dados pessoais</h2>
+        <p>
+          Para o cadastro no Clube Raízes, poderão ser solicitados nome
+          completo, CPF, data de nascimento, e-mail, telefone e senha. Para
+          pedidos sem cadastro, será solicitado apenas o primeiro nome para
+          identificação na retirada. Também poderão ser registrados pedidos,
+          histórico de compras e pontos acumulados.
+        </p>
+
+        <h2>2. Finalidade do uso dos dados</h2>
+        <p>
+          Os dados serão utilizados para cadastro e acesso à conta,
+          identificação do cliente, realização e acompanhamento de pedidos,
+          administração de pontos e descontos, atendimento e cumprimento de
+          obrigações legais. Promoções e comunicações deverão respeitar as
+          preferências e os direitos dos clientes.
+        </p>
+
+        <h2>3. Armazenamento e segurança</h2>
+        <p>
+          Na operação completa, serão adotadas medidas técnicas e
+          administrativas adequadas para proteger os dados contra acesso não
+          autorizado, perda, alteração e divulgação indevida. O acesso às
+          informações será limitado a pessoas e serviços autorizados. Os dados
+          serão mantidos pelo período necessário às finalidades informadas e às
+          obrigações legais aplicáveis.
+        </p>
+
+        <h2>4. Compartilhamento de dados</h2>
+        <p>
+          Quando necessário para a prestação dos serviços, dados poderão ser
+          compartilhados com fornecedores autorizados, como processadores de
+          pagamento. O compartilhamento deverá observar a legislação e as
+          medidas de proteção adequadas. O Raízes do Nordeste não comercializará
+          dados pessoais de seus clientes.
+        </p>
+
+        <h2>5. Clube Raízes</h2>
+        <p>
+          Os dados de cadastro e de compras serão utilizados para administrar o
+          saldo de pontos, registrar resgates e disponibilizar os benefícios
+          previstos nas regras do programa de fidelidade.
+        </p>
+
+        <h2>6. Direitos dos titulares</h2>
+        <p>
+          Conforme a LGPD, os clientes poderão solicitar, nas hipóteses
+          previstas em lei, confirmação de tratamento, acesso, correção,
+          eliminação, anonimização ou bloqueio de dados, informações sobre
+          compartilhamento e revogação de consentimento quando aplicável. Na
+          operação completa, as solicitações serão tratadas pelos canais de
+          atendimento disponibilizados pela empresa.
+        </p>
+
+        <p>Na demonstração, a opção “Excluir conta” em Minha Conta permite apagar os dados do cadastro e os pontos do cliente neste navegador, após confirmação. Essa exclusão local não representa um processo de eliminação em servidores reais.</p>
+
+        <h2>7. Atualizações desta política</h2>
+        <p>
+          Esta política poderá ser atualizada para acompanhar mudanças nos
+          serviços, nos procedimentos de tratamento de dados ou na legislação.
+        </p>
+
+        <p>
+          <a href="#conta">Voltar para minha conta</a> ·
+          <a href="#promocoes">Conhecer o Clube Raízes</a>
+        </p>
+        <footer class="politica-aviso">
+          Este site faz parte de um projeto acadêmico desenvolvido para fins
+          educacionais. As funcionalidades de cadastro, pedidos, pagamentos e
+          fidelização são demonstrativas.
+        </footer>
+      </section>
+    </div>
+
+    <script src="carrinho.js"></script>
+    <script src="script.js"></script>
+    <script src="cadastro.js"></script>
+  </body>
+</html>
