@@ -218,3 +218,24 @@
 .aviso-preparo p { margin: .45rem 0; line-height: 1.4; }
 .aviso-preparo small { display: block; line-height: 1.35; }
 .fluxo-botao-excluir { background: #fffdf8; color: #8a391f; border: 1px solid #8a391f; }
+
+/* Carrinho no cabeçalho: mais contraste e área de toque no celular e tablet */
+@media (max-width: 1023px) {
+  .link-carrinho-cabecalho {
+    min-width: 48px;
+    min-height: 44px;
+    padding: 6px 10px;
+    gap: 6px;
+    justify-content: center;
+    background: var(--creme);
+    border-radius: 8px;
+  }
+  .carrinho-icone { font-size: 24px; line-height: 1; }
+  .carrinho-contador {
+    min-width: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--verde);
+  }
+}
